@@ -1,21 +1,41 @@
+html, body {
+    height: 100%; /* Asegúrate de que el body ocupe el 100% de la altura */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
 body {
-    margin: 0;
+    display: flex; /* Usa flexbox para el layout */
+    flex-direction: column; /* Apila los elementos en columna */
     font-family: Arial, sans-serif;
-    background-image: url('https://webadminportal.ucv.edu.pe/uploads/images/noticias/2024/Per%C3%BA-conquista-el-mundo-1118.webp'); /* Cambia esta ruta a la ubicación de tu imagen */
+    background-color: #FFFAFA;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+main {
+    flex: 1; /* Permite que el main ocupe todo el espacio restante */
+    padding: 10px;
+    background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+}
+
+.footer {
+    flex: 0 0 auto; /* Esto asegura que el footer ocupe el espacio necesario */
+    background-color: rgba(209, 18, 18, 0.904);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+
 .title {
     text-align: center;
-    font-size: 2.5rem;
-    color: #f7f7f7;
+    font-size: 40px;
+    color: #080808;
     animation: fadeIn 2s;
     margin: 20px 0;
 }
 
-/* Definición de la animación */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -28,33 +48,49 @@ body {
 }
 
 .navbar {
-    background-color: rgba(248, 249, 250, 0.8);
-    padding: 15px;
+    background-color: rgba(7, 6, 6, 0.8); /* Fondo rojo con opacidad */
+    padding: 5px 40px; /* Espaciado superior/inferior de 5px y lateral de 40px */
+    position: relative;
+    margin: 0 auto; /* Centra el navbar horizontalmente */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;
+    height: auto; /* Centra los elementos verticalmente */
 }
+
 
 .navbar-nav {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente los links */
+    margin: 0;
+    padding: 10;
 }
 
 .nav-item {
-    margin: 0;
+    margin: 0 20px; /* Espacio entre cada enlace */
 }
 
 .nav-link {
     text-decoration: none;
-    color: #0056b3; /* Color del texto de las etiquetas */
+    color: #fff;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .nav-link:hover {
-    color: #003d80; /* Color al pasar el mouse sobre el enlace */
+    color: #000; /* Color del texto al hacer hover */
 }
 
+
+
 .footer {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
-    color: #ffffff; /* Texto blanco */
+    flex: 0 0 auto; /* Esto asegura que el footer ocupe el espacio necesario */
+    background-color: #f8f4f4;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
 }
@@ -69,52 +105,198 @@ body {
 
 .footer-links a {
     text-decoration: none;
-    color: white; /* Color de los enlaces del footer */
+    color: #141414;
     margin: 0 15px;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
-    color: #f5f5f5;
+    color: #0056b3;
 }
 
 main {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* Espaciado entre secciones */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 .info-section {
-    margin-bottom: 40px;
+    flex: 1;
+    margin: 0 10px;
+    background-color: none;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-    background-color: #ffffff; /* Fondo blanco para las tarjetas */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 15px; /* Espaciado interno */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+    background-color: none;
+    border-radius: 8px;
+    padding: 15px;
 }
 
 h2 {
-    color: #007bff; /* Color de los títulos */
-    font-size: 1.8rem; /* Tamaño de fuente para los títulos de las tarjetas */
-    margin-bottom: 10px; /* Espaciado inferior del título */
+    color: #020202;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 p {
     font-size: 1rem;
     line-height: 1.5;
-    color: #333333;
+    color: #0c0b0b;
 }
 
 /* Estilos para la cuadrícula */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px; /* Espacio entre los elementos */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-items: center; /* Alinea las imágenes horizontalmente al centro */
+    align-items: center; /* Alinea las imágenes verticalmente al centro */
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: none;
     padding: 10px;
     border-radius: 5px;
+    text-align: center;
+}
+
+/* Tamaño de las imágenes dentro de grid-item */
+.grid-item img {
+    width: 300px; /* Establece la anchura deseada */
+    height: 300px; /* Establece la altura deseada */
+    object-fit: cover;
+    border-radius: 40px; /* Asegura que las imágenes se recorten y llenen el área especificada */
+}
+
+
+#galeria {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+@media (max-width: 768px) {
+    .grid-item img {
+        width: 80%; /* Ajusta el ancho a 80% del contenedor en pantallas pequeñas */
+        height: auto; /* Mantiene la relación de aspecto */
+    }
+}
+
+/* Botón hamburguesa */
+.mobile-menu {
+    display: none;
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+    font-size: 30px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+/* Mostrar el botón hamburguesa y ocultar el menú de navegación en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        position: absolute; /* Para que se posicione relativo a su contenedor */
+        left: 0; /* Alinea el menú a la izquierda */
+        top: 50px; /* Ajusta la posición vertical como sea necesario */
+        width: 200px; /* Ajusta el ancho según lo necesites */
+        border-radius: 5px; /* Para redondear las esquinas */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Para un efecto de sombra */
+        z-index: 1000; /* Para asegurarse de que se muestre por encima de otros elementos */
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu li {
+        margin: 10px 0;
+    }
+
+    .mobile-menu .nav-link {
+        color: #f3f8fd;
+        font-size: 20px;
+        display: block; /* Asegúrate de que los enlaces ocupen todo el ancho del menú */
+        padding: 10px; /* Espaciado alrededor del enlace */
+        text-decoration: none; /* Para quitar el subrayado */
+    }
+
+    .mobile-menu .nav-link:hover {
+        color: #0a0a0a;
+        background-color: rgba(255, 255, 255, 0.2); /* Fondo al pasar el mouse */
+    }
+}
+
+.grid-item {
+    position: relative; /* Necesario para mostrar la animación al costado */
+    transition: transform 0.3s ease; /* Animación al seleccionar la card */
+    z-index: 1; /* Asegúrate de que el z-index esté configurado */
+}
+
+/* Ocultar la información por defecto */
+.info-text {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0; /* Cambiar a 0 para que aparezca en la parte superior de la imagen */
+    left: 0; /* Cambiar a 0 para que se alinee con la imagen */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro más oscuro */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Para que el texto ocupe todo el ancho */
+    color: #fff; /* Texto blanco */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo */
+    z-index: 2; /* Asegúrate de que el z-index esté mayor que el de la imagen */
+}
+
+/* Animación al hover */
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item:hover .info-text {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s; /* Aparece suavemente */
+}
+.navbar-logo {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Alinear verticalmente al centro */
+    margin-right: 20px; /* Espaciado a la derecha para separar del resto de la navbar */
+}
+
+.navbar-logo img {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 60px; /* Establece una altura máxima para el logo */
+    border-radius: 8px; /* Bordes redondeados, opcional */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
 }

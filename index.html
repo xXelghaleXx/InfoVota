@@ -7,46 +7,70 @@
     <title>InfoVota</title>
 </head>
 <body>
-    <h1 class="title">InfoVota</h1>
-    <nav class="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
-            <li class="nav-item"><a href="#noticias" class="nav-link">Noticias</a></li>
-            <li class="nav-item"><a href="#partidos" class="nav-link">Partidos Políticos</a></li>
-            <li class="nav-item"><a href="#comparacion" class="nav-link">Comparación de Candidatos</a></li>
-            <li class="nav-item"><a href="#historia" class="nav-link">Historia Política</a></li>
-        </ul>
-    </nav>
-    
-    <main>
-        <section id="quienes-somos" class="info-section">
-            <div class="card">
-                <h2>¿Quiénes somos?</h2>
-                <p>En InfoVota, nos dedicamos a proporcionar información objetiva y accesible sobre los partidos políticos y candidatos en Perú. Nuestro objetivo es ayudar a los ciudadanos a tomar decisiones informadas durante las elecciones.</p>
-            </div>
-        </section>
-    
-        <section id="como-funciona" class="info-section">
-            <div class="card">
-                <h2>¿Cómo funciona la página?</h2>
-                <p>InfoVota es una plataforma en línea que permite a los usuarios acceder a noticias, comparaciones de candidatos y una visión general de la historia política en Perú. A través de nuestro menú, puedes navegar fácilmente entre las diferentes secciones para encontrar la información que necesitas.</p>
-            </div>
-        </section>
 
+  
+
+    <div class="navbar">
+        <button class="menu-btn" onclick="toggleMenu()">&#9776;</button> <!-- Botón hamburguesa -->
+        <ul class="navbar-nav">
+            <div class="navbar-logo">
+                <img src="https://media.discordapp.net/attachments/1276352746169307172/1291998824214171668/file-oEtgtsc4flndM0e3lriK8c53.png?ex=6702232b&is=6700d1ab&hm=db0ea3d329c1441f342b12924bf2e09419b3dde2b430cf5fa4904e7d4728e539&=&format=webp&quality=lossless&width=614&height=614" alt="Descripción de Imagen 1">
+            </div>
+            
+            <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="Noticias.html" class="nav-link">Noticias</a></li>
+            <li class="nav-item"><a href="Partidos.html" class="nav-link">Partidos Políticos</a></li>
+            <li class="nav-item"><a href="Comparacion.html" class="nav-link">Comparación de Candidatos</a></li>
+            <li class="nav-item"><a href="Historia.html" class="nav-link">Educacion Politica</a></li>
+        </ul>
+      </div>
+    
+    <div id="mobile-menu" class="mobile-menu">
+        <ul>
+            <div class="navbar-logo">
+                <img src="https://media.discordapp.net/attachments/1276352746169307172/1291998445778763839/953040d6-fb6d-48d2-b7ea-68c9a775bbce.png?ex=670222d1&is=6700d151&hm=3be87f4724dc0eb29b50fdc6eae1256f8694a46ebf8fa50118e6e982c1cf39c8&=&format=webp&quality=lossless&width=614&height=614" alt="Descripción de Imagen 1"> <!-- Título o logo -->
+            </div>
+            <li ><a href="index.html" class="nav-link">Inicio</a></li>
+            <li ><a href="Noticias.html" class="nav-link">Noticias</a></li>
+            <li ><a href="Partidos.html" class="nav-link">Partidos Políticos</a></li>
+            <li ><a href="Comparacion.html" class="nav-link">Comparación de Candidatos</a></li>
+            <li ><a href="Historia.html" class="nav-link">Educacion Politica</a></li>
+          
+        </ul>
+    </div>
+
+    <main>
+        <section id="sobre" class="info-container">
+            <div class="info-section">
+                <h2>¿Quiénes somos?</h2>
+                <p>En InfoVota, nos dedicamos a proporcionar información objetiva y accesible sobre los partidos políticos y candidatos en Perú.</p>
+            </div>
+        
+            <div class="info-section">
+                <h2>¿Cómo funciona la página?</h2>
+                <p>InfoVota es una plataforma en línea que permite a los usuarios acceder a noticias, comparaciones de candidatos y una visión general de la historia política en Perú.</p>
+            </div>
+        </section>
+        
         <section id="galeria" class="grid">
             <div class="grid-item">
-                <h3>Título de Imagen 1</h3>
-                <img src="imagen1.jpg" alt="Descripción de Imagen 1">
+                <h3>Partidos Políticos</h3>
+                <img src="https://studentsforliberty.org/wp-content/uploads/2020/02/NFS-Blog-Image-12-1.jpg" alt="Descripción de Imagen 1">
+                <p class="info-text">Los partidos políticos en Perú, como el Partido Nacionalista, el APRA y Fuerza Popular, buscan promover sus propuestas y representar a los ciudadanos en elecciones.</p>
             </div>
+            
             <div class="grid-item">
-                <h3>Título de Imagen 2</h3>
-                <img src="imagen2.jpg" alt="Descripción de Imagen 2">
+                <h3>Movimientos Sociales</h3>
+                <img src="https://concepto.de/wp-content/uploads/2023/01/movimientos-sociales.jpg" alt="Descripción de Imagen 2">
+                <p class="info-text">Los movimientos sociales en Perú abogan por derechos civiles y reformas sociales, influyendo en la política y las elecciones.</p>
             </div>
+            
             <div class="grid-item">
-                <h3>Título de Imagen 3</h3>
-                <img src="imagen3.jpg" alt="Descripción de Imagen 3">
+                <h3>Elecciones Generales</h3>
+                <img src="https://www.udep.edu.pe/hoy/wp-content/uploads/sites/49/2020/09/Elecciones-Generales.jpg" alt="Descripción de Imagen 3">
+                <p class="info-text">Las elecciones generales en Perú se celebran cada cinco años, donde se eligen presidentes, congresistas y representantes regionales.</p>
             </div>
-            <!-- Más elementos de cuadrícula según sea necesario -->
+            
         </section>
     </main>
     
@@ -60,5 +84,18 @@
             </div>
         </div>
     </footer>
+
+
+
+    <script>
+        function toggleMenu() {
+          var menu = document.getElementById("mobile-menu");
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          } else {
+            menu.style.display = "block";
+          }
+        }
+    </script>
 </body>
 </html>
