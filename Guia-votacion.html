@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>InfoVota</title>
+    <link rel="icon" href="./imagenes/Logo.webp" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+        <ul class="navbar-nav">
+            <div class="navbar-logo">
+                <img src="./imagenes/Logo.webp" alt="Logo InfoVota">
+            </div>
+            <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="Noticias.html" class="nav-link">Noticias</a></li>
+            <li class="nav-item"><a href="Partidos.html" class="nav-link">Partidos Políticos</a></li>
+            <li class="nav-item"><a href="Comparacion.html" class="nav-link">Comparación de Candidatos</a></li>
+            <li class="nav-item"><a href="Historia.html" class="nav-link">Educación Política</a></li>
+        </ul>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="mobile-menu">
+        <ul>
+            <div class="navbar-logo">
+                <img src="./imagenes/Logo.webp" alt="Logo InfoVota">
+            </div>
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="Noticias.html" class="nav-link">Noticias</a></li>
+            <li><a href="Partidos.html" class="nav-link">Partidos Políticos</a></li>
+            <li><a href="Comparacion.html" class="nav-link">Comparación de Candidatos</a></li>
+            <li><a href="Historia.html" class="nav-link">Educación Política</a></li>
+        </ul>
+    </div>
+
+    <style>
+        /* Aquí va el código CSS */
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0056a3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            border-bottom: 4px solid #ffd700;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+
+        /* Main Styles */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .step h2 {
+            color: #0056a3;
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+        }
+
+        .step p {
+            margin: 0 0 15px;
+            font-size: 1rem;
+        }
+
+        .step img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Layout */
+        @media (min-width: 768px) {
+            .step {
+                flex-direction: row;
+            }
+            .step img {
+                flex: 1;
+                margin: 0 15px;
+            }
+            .step div {
+                flex: 2;
+            }
+        }
+    </style>
+
+    <body>
+        <header>
+            <h1>🗳️ Guía para tu Primera Votación</h1>
+            <p>Aprende paso a paso cómo participar en el proceso electoral en Perú.</p>
+        </header>
+        <main>
+            <div class="step">
+                <h2>Paso 1: Revisa tu lugar de votación</h2>
+                <p>Ingresa a la página de la ONPE(https://www.gob.pe/onpe) y busca tu local de votación con tu DNI. Es importante saber con anticipación dónde te corresponde votar.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuUPFxvkj3RmkY4-CNb6ZBIhkDiFb0z08c3ZbYREEFWFcrt07g_5YWj6xYSPdxEh8GwpQ&usqp=CAU" alt="Revisar lugar de votación">
+            </div>
+            <div class="step">
+                <h2>Paso 2: Acude al local el día de las elecciones</h2>
+                <p>El día de las elecciones lleva tu DNI, una mascarilla, y si es necesario, un lapicero azul. Procura llegar temprano para evitar aglomeraciones.</p>
+                <img src="https://e.rpp-noticias.io/xlarge/2018/08/10/510651_660394.jpg" alt="Día de elecciones">
+            </div>
+            <div class="step">
+                <h2>Paso 3: Ubica tu mesa de votación</h2>
+                <p>Una vez en tu local de votación, busca tu número de mesa en los paneles informativos o consulta con el personal de apoyo.</p>
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CSZOMTNSOVFF3D57YDSAKS5WAQ.jpeg" alt="Mesa de votación">
+            </div>
+            <div class="step">
+                <h2>Paso 4: Identifícate y recibe tu cédula</h2>
+                <p>Presenta tu DNI al miembro de mesa para que te entreguen la cédula electoral. Sigue las instrucciones del personal.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCuE_Aq7cSBBztRZM5pTgOh2qqqRo6AGLIpg&s" alt="Recibir cédula electoral">
+            </div>
+            <div class="step">
+                <h2>Paso 5: Marca tu voto</h2>
+                <p>Entra a la cámara secreta, marca tu opción preferida en la cédula y verifica que todo esté correcto antes de doblarla.</p>
+                <img src="https://s3.amazonaws.com/rtvc-assets-canalinstitucional.tv/s3fs-public/inline-images/voto%20nulo%20alcaldia.jpg" alt="Marcar tu voto">
+            </div>
+            <div class="step">
+                <h2>Paso 6: Deposita la cédula en la urna</h2>
+                <p>Coloca tu cédula doblada en la urna que corresponde y devuelve el lapicero si utilizaste uno prestado.</p>
+                <img src="https://s3.amazonaws.com/gobcl-prod/filer_public_thumbnails/public_files/Chile-Avanzando/urna-voto-elecciones.jpg__1440x2000_q70_subsampling-2.jpg" alt="Depositar cédula en urna">
+            </div>
+            <div class="step">
+                <h2>Paso 7: Recoge tu constancia de sufragio</h2>
+                <p>No olvides recoger tu constancia de sufragio. Este documento es importante para acreditar que cumpliste con tu deber cívico.</p>
+                <img src="https://cdn.www.gob.pe/uploads/document/file/2225882/standard_Foto.jpg" alt="Constancia de sufragio">
+            </div>
+        </main>
+    </body>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2024 InfoVota. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#contacto">Contacto</a>
+                <a href="#politicas">Políticas de Privacidad</a>
+                <a href="#terminos">Términos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+     <script src="carrusel.js"></script>
+     <script src="menu-movil.js"></script>
+     <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobile-menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
