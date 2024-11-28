@@ -113,3 +113,4 @@ function compararPartidos() {
 
     llenarComparacion(partido1, partido2);
 }
+
